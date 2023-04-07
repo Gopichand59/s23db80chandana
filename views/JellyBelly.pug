@@ -1,0 +1,26 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome back to #{title} modifed by Gopichand Chandana 
+
+  - results = [{ JellyBelly: "Herman Goelitz Candy Company", size: "large", cost: 21 },{ JellyBelly: "Goelitz Confectionery Company", size: "med", cost: 25 },{ JellyBelly: "Fruit Gems", size: "small", cost: 30 }];
+  div.container-fluid 
+    -
+    div.row 
+    -
+    each item, index in results
+        div.col-sm-6
+            h2= item.JellyBelly
+            p= item.JellyBelly_size 
+            p= "cost: $"+item.cost.toFixed(2)
+            div.row
+                each prop, i in Object.keys(item)
+                    div(col-sm-2,  onclick=`buy(${index})`)
+                        p #{Object.keys(item)[i]}: #{item[prop]}
+
+        
+    script.
+        function buy (index){
+            alert (`You purchased item ${index+1}`)    
+        }
