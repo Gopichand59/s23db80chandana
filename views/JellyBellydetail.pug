@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  h1=title
+
+  if (toShow == null)
+   h2 No instance to delete
+  else
+   - let JellyBellyid = toShow._id
+   - let JellyBelly_type = toShow.JellyBelly
+   - let JellyBellycost = toShow.cost
+   - let JellyBellysize = toShow.size
+  div
+    div.row
+     div(class='JellyBellyAttr mr-3') JellyBelly ID is:
+     div #{JellyBellyid}
+    div.row
+     div(class='JellyBellyAttr mr-3') JellyBelly Type is:
+     div #{JellyBelly_type}
+    div.row
+     div(class='JellyBellyAttr mr-3') JellyBelly Size is:
+     div #{JellyBellysize}
+    div.row
+     div(class='JellyBellyAttr mr-3') JellyBelly Cost is:
+     div #{JellyBellycost}

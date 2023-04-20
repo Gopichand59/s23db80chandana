@@ -1,0 +1,16 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+.JellyBellyAttr {
+  background-color: rgb(234, 160, 22);
+  width: 120px;
+  padding: 10px 20px;
+  margin: 5px;
+  display: inline-block;
+  border: 5px solid rgb(19, 19, 19);
+  }
